@@ -12,6 +12,44 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+
+      <form id="sign-up" class="container">
+        <h3 class="col-12 sign-up-header">Sign Up</h3>
+        <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+        <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+        <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+        <input class="col-12" type="submit" value="Sign up!">
+        <!-- <p>Already registered?</p>
+        <button>Click here to sign in</button> -->
+      </form>
+
+      <form id="sign-in" class="container">
+        <h3 class="col-12 sign-in-header">Sign In</h3>
+        <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+        <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+        <input class="col-12" type="submit" value="Sign in!">
+        <!-- <p>First time here?</p>
+        <button>Click to sign up</button> -->
+      </form>
+
+      <div class="game-board container">
+        <h1 class="header">T1C TAC T0E</h1>
+        <div class="row">
+          <div class="col-4 zero"></div>
+          <div class="col-4 one"></div>
+          <div class="col-4 two"></div>
+        </div>
+        <div class="row">
+          <div class="col-4 three"></div>
+          <div class="col-4 four"></div>
+          <div class="col-4 five"></div>
+        </div>
+        <div class="row">
+          <div class="col-4 six"></div>
+          <div class="col-4 seven"></div>
+          <div class="col-4 eight"></div>
+        </div>
+      </div>
     </body>
+
 </html>

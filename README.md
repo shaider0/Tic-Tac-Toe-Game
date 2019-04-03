@@ -3,6 +3,11 @@ Welcome to T1c-Tac-T0e, my first deployed application as a software engineer! Th
 
 Development Process
 
+Reminders:
+
+-Commit early and often. If you screw something up, use git reset.
+
+
 Steps (high-level):
 
 - [X]Gather all the documentation and understand the project at a high level
@@ -37,6 +42,9 @@ Gather & Review Resources:
   https://git.generalassemb.ly/ga-wdi-boston/html-css-bootstrap-layout
   Bootstrap
 
+  https://git.generalassemb.ly/SHaider0/project-issue-tracker-guide
+  Issue tracker guide
+
 Brainstorm & Diagram
 
   User Stories
@@ -48,5 +56,7 @@ Brainstorm & Diagram
   * After starting a game, users can reset the game board at any time to start a new game.
   * At any point after logging in, users can log out
 
-  Application Design
-  
+Application Design
+
+  Game board: HTML/Bootstrap
+  Moves: Event handlers
