@@ -1,3 +1,6 @@
+// show play again when end game is reached
+// $('#play-again').hide()
+
 const store = require('../store')
 
 const signUpSuccess = function (formData) {
@@ -12,8 +15,11 @@ const signUpFailure = function (formData) {
 const signInSuccess = function (formData) {
   console.log('sign in success: ', formData)
   store.user = formData.user
-  // $('#sign-up').hide()
-  // $('#sign-in').hide()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#game-board').show()
+  $('#sign-out').show()
+  $('#change-password').show()
 }
 
 const signInFailure = function (formData) {
