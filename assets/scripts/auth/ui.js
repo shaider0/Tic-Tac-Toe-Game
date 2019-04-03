@@ -12,15 +12,38 @@ const signUpFailure = function (formData) {
 const signInSuccess = function (formData) {
   console.log('sign in success: ', formData)
   store.user = formData.user
+  // $('#sign-up').hide()
+  // $('#sign-in').hide()
 }
 
 const signInFailure = function (formData) {
   console.log('sign in failed: ', formData)
 }
 
+const changePwSuccess = function () {
+  console.log('change password success')
+}
+
+const changePwFailure = function () {
+  console.log('change password failure')
+}
+
+const signOutSuccess = function () {
+  console.log('sign out successful!')
+  store.user = null
+}
+
+const signOutFailure = function () {
+  console.log('sign out failed!')
+}
+
 module.exports = {
   signInSuccess,
   signInFailure,
   signUpSuccess,
-  signUpFailure
+  signUpFailure,
+  changePwSuccess,
+  changePwFailure,
+  signOutSuccess,
+  signOutFailure
 }
