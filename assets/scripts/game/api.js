@@ -3,6 +3,14 @@
 const config = require('../config.js')
 const store = require('../store')
 
-module.exports = {
+const getGames = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {authorization: 'Token token=' + store.user.token}
+  })
+}
 
+module.exports = {
+  getGames
 }

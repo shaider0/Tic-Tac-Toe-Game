@@ -9,6 +9,15 @@ const store = require('../store')
 //   console.log('sign up failure ran with the data: ', formData)
 // }
 
-module.exports = {
+const getGamesSuccess = function (formData) {
+  console.log('get games succeeeded: ', formData)
+}
 
+const getGamesFailure = function (formData) {
+  console.log('get games failed: ', formData)
+}
+
+module.exports = {
+  getGamesSuccess,
+  getGamesFailure
 }

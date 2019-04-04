@@ -61,8 +61,22 @@ const onClick = function (event) {
   }
 }
 
+const onGetGames = function () {
+  api.getGames()
+    .then(ui.getGamesSuccess)
+    .catch(ui.getGamesFailure)
+}
+
+// const indexExample = function () {
+//   return $.ajax({
+//     url: config.apiUrl + '/examples',
+//     method: 'GET'
+//   })
+// }
+
 const addHandlers = function () {
   $('.box').on('click', onClick)
+  $('#getGames').on('click', onGetGames)
 }
 
 $('#restart').on('click', function () {
