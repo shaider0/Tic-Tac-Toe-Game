@@ -1,50 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>t1c tac t0e</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <head>
+    <title>t1c tac t0e</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1 class="header">tic tac toe</h1>
-      <form id="sign-up" class="container">
-        <h3 class="col-12 sign-up-header">Sign Up</h3>
-        <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-        <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
-        <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <input class="col-12 btn btn-primary" type="submit" value="Sign up!">
-        <!-- <p>Already registered?</p>
-        <button>Click here to sign in</button> -->
-      </form>
+    <!-- Do not add `link` tags-->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <form id="sign-in" class="container">
-        <h3 class="col-12 sign-in-header">Sign In</h3>
-        <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-        <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
-        <input class="col-12 btn btn-primary" type="submit" value="Sign in!">
-        <!-- <p>First time here?</p>
-        <button>Click to sign up</button> -->
-      </form>
+    <!-- Do not add `script` tags-->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
 
-      <form id="change-password" class="container">
-        <h3>Change Password</h3>
-        <input required type="password" name="passwords[old]" placeholder="old password">
-        <input required type="password" name="passwords[new]" placeholder="new password">
-        <input type="submit" value="change password">
-      </form>
+  <body>
 
-      <form id="sign-out" class="container">
-        <h3>Sign Out</h3>
-        <input type="submit" value="Sign Out!">
-      </form>
+<!--SIGN UP-->
+    <h1 class="header">tic tac toe</h1>
+    <form id="sign-up" class="container">
+      <h3 class="col-12 sign-up-header">Sign Up</h3>
+      <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+      <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+      <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+      <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
+      <!-- <p>Already registered?</p>
+      <button>Click here to sign in</button> -->
+    </form>
 
-      <div id="game-board" class="container">
+<!--SIGN IN-->
+    <form id="sign-in" class="container">
+      <h3 class="col-12 sign-in-header">Sign In</h3>
+      <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+      <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+      <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
+      <!-- <p>First time here?</p>
+      <button>Click to sign up</button> -->
+    </form>
+
+<!--CHANGE PW-->
+    <form id="change-password" class="container">
+      <h3>Change Password</h3>
+      <input required type="password" name="passwords[old]" placeholder="old password">
+      <input required type="password" name="passwords[new]" placeholder="new password">
+      <input type="submit" value="change password">
+    </form>
+
+<!--SIGN OUT-->
+    <form id="sign-out" class="container">
+      <h3>Sign Out</h3>
+      <input type="submit" value="Sign Out!">
+    </form>
+
+    <div class="container">
+
+<!--GAME BOARD-->
+      <div id="game-board">
         <div class="row">
           <div class="col-4 box zero"></div>
           <div class="col-4 box one"></div>
@@ -60,19 +70,25 @@
           <div class="col-4 box seven"></div>
           <div class="col-4 box eight"></div>
         </div>
-
-        <div>
-          <h4 id="winner-display"></h4>
-        </div>
-
-        <div>
-          <h3>Show statistics</h3>
-          <p id="statistics"></p>
-        </div>
-
-        <button id="play-again">Play Again</button>
+      </div>
+<!--WINNER DISPLAY-->
+      <div>
+        <h4 id="winner-display"></h4>
       </div>
 
-    </body>
+<!--PLAY AGAIN-->
+      <div>
+        <button class="col-12 btn btn-success" id="restart">Restart Game</button>
+      </div>
+
+<!--STATISTICS-->
+      <div id="statistics">
+        <h3>Show statistics</h3>
+        <p>Show Stats Here</p>
+      </div>
+
+    </div>
+
+  </body>
 
 </html>

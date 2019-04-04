@@ -4,6 +4,9 @@ const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
 
+let gameLock = false
+let currentPlayer = 'X'
+
 const switchPlayer = function () {
   if (currentPlayer === 'X') {
     currentPlayer = 'O'
@@ -41,18 +44,18 @@ const checkWinner = function () {
   ) {
     switchPlayer()
     $('#winner-display').text(`Player ${currentPlayer} wins!`)
+    gameLock = true
   } else if (zero && one && two && three && four && five && six && seven && eight) {
     $('#winner-display').text('It\'s a tie!')
+    gameLock = true
   }
 }
 
-let currentPlayer = 'X'
-
 const clickBox = function (event) {
   const text = $(event.target).text()
-  if (!text) {
+  if (!text && !gameLock) {
     $(event.target).text(currentPlayer)
-    // push index to API
+    // push index to API, data ID
     switchPlayer()
     checkWinner()
   }
@@ -61,6 +64,13 @@ const clickBox = function (event) {
 const addHandlers = function () {
   $('.box').on('click', clickBox)
 }
+
+$('#restart').on('click', function () {
+  $('.box').text('')
+  $('#winner-display').text('')
+  gameLock = false
+  currentPlayer = 'X'
+})
 
 module.exports = {
   addHandlers

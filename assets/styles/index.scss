@@ -1,5 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
 
+body {
+  background-color: #c0c8ca;
+}
+
 .header {
   text-align: center;
 }
@@ -17,7 +21,6 @@
 
 #statistics {
   border: 2px solid black;
-  padding-top: 50px;
 }
 
 .one, .four, .seven {
@@ -40,4 +43,8 @@
   border-radius: 5px;
   margin: 20px auto;
   padding: 10px;
+}
+
+#restart {
+  margin: 10px;
 }
