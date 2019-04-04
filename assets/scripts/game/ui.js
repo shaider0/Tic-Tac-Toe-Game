@@ -11,13 +11,25 @@ const store = require('../store')
 
 const getGamesSuccess = function (formData) {
   console.log('get games succeeeded: ', formData)
+  const gamesData = JSON.stringify(formData.games)
+  $('#stats-display').text('Games: ' + gamesData)
 }
 
 const getGamesFailure = function (formData) {
-  console.log('get games failed: ', formData)
+  $('#stats-display').text('Something went wrong. Please try again later')
+}
+
+const createGameSuccess = function (game) {
+  console.log('Game successfully created!', game)
+}
+
+const createGameFailure = function () {
+  console.log('Game successfully created!')
 }
 
 module.exports = {
   getGamesSuccess,
-  getGamesFailure
+  getGamesFailure,
+  createGameSuccess,
+  createGameFailure
 }

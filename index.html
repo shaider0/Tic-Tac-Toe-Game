@@ -37,7 +37,10 @@
       <button>Click to sign up</button> -->
     </form>
 
-<!--CHANGE PW-->
+
+<!--CHANGE PW BUTTON-->
+<button id="show-change-password">Change Password</button>
+<!--CHANGE PW FORM-->
     <form id="change-password" class="container">
       <h3>Change Password</h3>
       <input required type="password" name="passwords[old]" placeholder="old password">
@@ -76,6 +79,11 @@
         <h4 id="winner-display"></h4>
       </div>
 
+<!--START NEW GAME-->
+  <form id="create">
+    <input type="submit" value="Start New Game!">
+  </form>
+
 <!--PLAY AGAIN-->
       <div>
         <button class="col-12 btn btn-success" id="restart">Restart Game</button>
@@ -85,6 +93,7 @@
       <div id="statistics">
         <h3>Statistics</h3>
         <button id="getGames">See all games</button>
+        <p id="stats-display"></p>
 
       </div>
 

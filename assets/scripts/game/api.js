@@ -11,6 +11,16 @@ const getGames = function () {
   })
 }
 
+const createGame = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'POST',
+    headers: {authorization: 'Token token=' + store.user.token},
+    data: {}
+  })
+}
+
 module.exports = {
-  getGames
+  getGames,
+  createGame
 }

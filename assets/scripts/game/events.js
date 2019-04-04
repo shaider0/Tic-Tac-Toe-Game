@@ -74,9 +74,22 @@ const onGetGames = function () {
 //   })
 // }
 
+const onShowChangePassword = function () {
+  $('#change-password').show()
+}
+
+const onCreate = function (event) {
+  event.preventDefault()
+  api.createGame()
+    .then(ui.createGameSuccess)
+    .catch(ui.createGameFailure)
+}
+
 const addHandlers = function () {
+  $('#create').on('submit', onCreate)
   $('.box').on('click', onClick)
   $('#getGames').on('click', onGetGames)
+  $('#show-change-password').on('click', onShowChangePassword)
 }
 
 $('#restart').on('click', function () {

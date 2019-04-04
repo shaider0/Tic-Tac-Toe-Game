@@ -17,11 +17,11 @@ const signInSuccess = function (formData) {
   store.user = formData.user
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#show-change-password').show()
   $('#game-board').show(800)
   $('#statistics').show(800)
   $('#restart').show()
   $('#sign-out').show()
-  $('#change-password').show()
 }
 
 const signInFailure = function (formData) {

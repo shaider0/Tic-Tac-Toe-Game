@@ -11,6 +11,7 @@ const gameEvents = require('./game/events.js')
 $(() => {
   $('#sign-out').hide()
   $('#game-board').hide()
+  $('#show-change-password').hide()
   $('#change-password').hide()
   $('#restart').hide()
   $('#statistics').hide()
