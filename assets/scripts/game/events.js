@@ -4,6 +4,14 @@ const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
 
+const switchPlayer = function () {
+  if (currentPlayer === 'X') {
+    currentPlayer = 'O'
+  } else {
+    currentPlayer = 'X'
+  }
+}
+
 const checkWinner = function () {
   const zero = $('.zero').text()
   const one = $('.one').text()
@@ -31,7 +39,10 @@ const checkWinner = function () {
     (zero && zero === four && four === eight) ||
     (two && two === four && four === six)
   ) {
-    console.log('winner!')
+    switchPlayer()
+    $('#winner-display').text(`Player ${currentPlayer} wins!`)
+  } else if (zero && one && two && three && four && five && six && seven && eight) {
+    $('#winner-display').text('It\'s a tie!')
   }
 }
 
@@ -42,11 +53,7 @@ const clickBox = function (event) {
   if (!text) {
     $(event.target).text(currentPlayer)
     // push index to API
-    if (currentPlayer === 'X') {
-      currentPlayer = 'O'
-    } else {
-      currentPlayer = 'X'
-    }
+    switchPlayer()
     checkWinner()
   }
 }
