@@ -3,18 +3,41 @@
 .header {
   text-align: center;
 }
+
 .container {
-  width: 400px;
+  width: 600px;
+}
+
+.box {
+  text-align: center;
+  padding-top: 25px;
+  height: 150px;
+  font-size: 70px;
+}
+
+#statistics {
+  border: 2px solid black;
+  padding-top: 50px;
 }
 
 .one, .four, .seven {
   border-left: 2px solid black;
   border-right: 2px solid black;
-  padding: 30px;
 }
 
 .three, .four, .five {
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  padding: 30px;
+}
+
+.row-1, .row-2, .row-3 {
+  display: flex;
+  justify-content: center;
+}
+
+#sign-in, #sign-up {
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 10px;
 }

@@ -12,13 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-
+      <h1 class="header">tic tac toe</h1>
       <form id="sign-up" class="container">
         <h3 class="col-12 sign-up-header">Sign Up</h3>
         <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
         <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
         <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <input class="col-12" type="submit" value="Sign up!">
+        <input class="col-12 btn btn-primary" type="submit" value="Sign up!">
         <!-- <p>Already registered?</p>
         <button>Click here to sign in</button> -->
       </form>
@@ -27,7 +27,7 @@
         <h3 class="col-12 sign-in-header">Sign In</h3>
         <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
         <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
-        <input class="col-12" type="submit" value="Sign in!">
+        <input class="col-12 btn btn-primary" type="submit" value="Sign in!">
         <!-- <p>First time here?</p>
         <button>Click to sign up</button> -->
       </form>
@@ -45,7 +45,6 @@
       </form>
 
       <div id="game-board" class="container">
-        <h1 class="header">T1C TAC T0E</h1>
         <div class="row">
           <div class="col-4 box zero"></div>
           <div class="col-4 box one"></div>
@@ -60,6 +59,11 @@
           <div class="col-4 box six"></div>
           <div class="col-4 box seven"></div>
           <div class="col-4 box eight"></div>
+        </div>
+
+        <div>
+          <h3>Show statistics</h3>
+          <p id="statistics"></p>
         </div>
 
         <button id="play-again">Play Again</button>

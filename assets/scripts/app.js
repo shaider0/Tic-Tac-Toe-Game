@@ -10,7 +10,7 @@ const gameEvents = require('./game/events.js')
 
 $(() => {
   $('#sign-out').hide()
-  $('#game-board').hide()
+  // $('#game-board').hide()
   $('#change-password').hide()
   $('#play-again').hide()
   events.addHandlers()
