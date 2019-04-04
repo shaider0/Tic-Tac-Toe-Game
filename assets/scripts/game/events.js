@@ -51,7 +51,7 @@ const checkWinner = function () {
   }
 }
 
-const clickBox = function (event) {
+const onClick = function (event) {
   const text = $(event.target).text()
   if (!text && !gameLock) {
     $(event.target).text(currentPlayer)
@@ -62,7 +62,7 @@ const clickBox = function (event) {
 }
 
 const addHandlers = function () {
-  $('.box').on('click', clickBox)
+  $('.box').on('click', onClick)
 }
 
 $('#restart').on('click', function () {
