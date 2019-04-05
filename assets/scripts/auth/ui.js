@@ -40,6 +40,10 @@ const signOutSuccess = function () {
   store.user = null
   $('#sign-up').show()
   $('#sign-in').show()
+  $('#game-board').hide()
+  $('#change-password-form').hide()
+  $('#winner-display').hide()
+  $('#turn-display').hide()
   $('#show-change-password-form').hide()
   $('#change-password-message').hide()
   $('#create').hide()
