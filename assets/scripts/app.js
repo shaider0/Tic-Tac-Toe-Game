@@ -9,10 +9,11 @@ const events = require('./auth/events.js')
 const gameEvents = require('./game/events.js')
 
 $(() => {
+  $('#create').hide()
   $('#sign-out').hide()
   $('#game-board').hide()
-  $('#show-change-password').hide()
-  $('#change-password').hide()
+  $('#show-change-password-form').hide()
+  $('#change-password-form').hide()
   $('#restart').hide()
   $('#statistics').hide()
   events.addHandlers()

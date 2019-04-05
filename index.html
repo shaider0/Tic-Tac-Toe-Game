@@ -14,91 +14,83 @@
   </head>
 
   <body>
-
-<!--SIGN UP-->
-    <h1 class="header">tic tac toe</h1>
-    <form id="sign-up" class="container">
-      <h3 class="col-12 sign-up-header">Sign Up</h3>
-      <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-      <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
-      <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-      <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
-      <!-- <p>Already registered?</p>
-      <button>Click here to sign in</button> -->
-    </form>
-
-<!--SIGN IN-->
-    <form id="sign-in" class="container">
-      <h3 class="col-12 sign-in-header">Sign In</h3>
-      <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-      <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
-      <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
-      <!-- <p>First time here?</p>
-      <button>Click to sign up</button> -->
-    </form>
-
-
-<!--CHANGE PW BUTTON-->
-<button id="show-change-password">Change Password</button>
-<!--CHANGE PW FORM-->
-    <form id="change-password" class="container">
-      <h3>Change Password</h3>
-      <input required type="password" name="passwords[old]" placeholder="old password">
-      <input required type="password" name="passwords[new]" placeholder="new password">
-      <input type="submit" value="change password">
-    </form>
-
-<!--SIGN OUT-->
-    <form id="sign-out" class="container">
-      <h3>Sign Out</h3>
-      <input type="submit" value="Sign Out!">
-    </form>
-
     <div class="container">
 
-<!--GAME BOARD-->
+      <!--SIGN UP-->
+      <h1 class="header">tic tac toe</h1>
+        <form id="sign-up">
+          <h3 class="col-12 sign-up-header">Sign Up</h3>
+          <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+          <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+          <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
+          <!-- <p>Already registered?</p>
+          <button>Click here to sign in</button> -->
+        </form>
+
+      <!--SIGN IN-->
+      <form id="sign-in">
+        <h3 class="col-12 sign-in-header">Sign In</h3>
+        <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+        <input required class="col-12" type="password" name="credentials[password]" placeholder="password">
+        <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
+      </form>
+
+      <!--START NEW GAME-->
+      <form id="create">
+        <input type="submit" value="Start a New Game!" class="btn btn-primary">
+      </form>
+
+      <!--GAME BOARD-->
       <div id="game-board">
         <div class="row">
-          <div class="col-4 box zero"></div>
-          <div class="col-4 box one"></div>
-          <div class="col-4 box two"></div>
+          <div class="col-4 box zero" data-index=0></div>
+          <div class="col-4 box one" data-index=1></div>
+          <div class="col-4 box two" data-index=2></div>
         </div>
         <div class="row">
-          <div class="col-4 box three"></div>
-          <div class="col-4 box four"></div>
-          <div class="col-4 box five"></div>
+          <div class="col-4 box three" data-index=3></div>
+          <div class="col-4 box four" data-index=4></div>
+          <div class="col-4 box five" data-index=5></div>
         </div>
         <div class="row">
-          <div class="col-4 box six"></div>
-          <div class="col-4 box seven"></div>
-          <div class="col-4 box eight"></div>
+          <div class="col-4 box six" data-index=6></div>
+          <div class="col-4 box seven" data-index=7></div>
+          <div class="col-4 box eight" data-index=8></div>
         </div>
       </div>
-<!--WINNER DISPLAY-->
+
+      <!--WINNER DISPLAY-->
       <div>
         <h4 id="winner-display"></h4>
       </div>
 
-<!--START NEW GAME-->
-  <form id="create">
-    <input type="submit" value="Start New Game!">
-  </form>
+      <!--CHANGE PW FORM-->
+      <form id="change-password-form">
+        <h3>Change Password</h3>
+        <input required type="password" name="passwords[old]" placeholder="current password">
+        <input required type="password" name="passwords[new]" placeholder="new password">
+        <input type="submit" value="change password now">
+      </form>
 
-<!--PLAY AGAIN-->
-      <div>
-        <button class="col-12 btn btn-success" id="restart">Restart Game</button>
-      </div>
-
-<!--STATISTICS-->
+      <!--STATISTICS-->
       <div id="statistics">
-        <h3>Statistics</h3>
-        <button id="getGames">See all games</button>
+        <button class="btn btn-primary" id="getGames">See all game stats</button>
         <p id="stats-display"></p>
-
       </div>
+
+      <!--CHANGE PW BUTTON-->
+      <div>
+        <button id="show-change-password-form" class="btn btn-primary">Change Password</button>
+        <p id="change-password-message"></p>
+      </div>
+
+      <!--SIGN OUT-->
+      <form id="sign-out">
+        <input class="btn btn-primary" type="submit" value="Sign Out!">
+      </form>
 
     </div>
-
   </body>
 
 </html>

@@ -51,10 +51,21 @@ const checkWinner = function () {
   }
 }
 
+const onUpdate = function () {
+  const gameId = ui.returnId()
+  api.updateGame(gameId)
+    .then(ui.updateSuccess)
+    .catch(ui.updateFailure)
+}
+
 const onClick = function (event) {
   const text = $(event.target).text()
   if (!text && !gameLock) {
     $(event.target).text(currentPlayer)
+    onUpdate()
+    // let index = $(event.target).attr('data-index')
+    // console.log('the index is ', index)
+
     // push index to API, data ID
     switchPlayer()
     checkWinner()
@@ -74,8 +85,8 @@ const onGetGames = function () {
 //   })
 // }
 
-const onShowChangePassword = function () {
-  $('#change-password').show()
+const onShowChangePasswordForm = function () {
+  $('#change-password-form').show()
 }
 
 const onCreate = function (event) {
@@ -89,7 +100,7 @@ const addHandlers = function () {
   $('#create').on('submit', onCreate)
   $('.box').on('click', onClick)
   $('#getGames').on('click', onGetGames)
-  $('#show-change-password').on('click', onShowChangePassword)
+  $('#show-change-password-form').on('click', onShowChangePasswordForm)
 }
 
 $('#restart').on('click', function () {

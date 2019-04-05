@@ -19,17 +19,37 @@ const getGamesFailure = function (formData) {
   $('#stats-display').text('Something went wrong. Please try again later')
 }
 
+let gameId
+
 const createGameSuccess = function (game) {
   console.log('Game successfully created!', game)
+  gameId = game.game.id
+  $('.box').text('')
+  $('#winner-display').text('')
+  $('#game-board').show(800)
 }
 
+const returnId = function () {
+  return gameId
+}
 const createGameFailure = function () {
   console.log('Game successfully created!')
+}
+
+const updateSuccess = function (game) {
+  console.log('Game successfully updated!', game)
+}
+
+const updateFailure = function () {
+  console.log('Game failed to update!')
 }
 
 module.exports = {
   getGamesSuccess,
   getGamesFailure,
   createGameSuccess,
-  createGameFailure
+  createGameFailure,
+  updateSuccess,
+  updateFailure,
+  returnId
 }
