@@ -23,8 +23,6 @@ const onSignIn = function (event) {
 
 const onChangePasswordForm = function (event) {
   event.preventDefault()
-  $('#show-change-password-form').show()
-  $('#change-password-form').hide()
 
   const formData = getFormFields(event.target)
   api.changePassword(formData)

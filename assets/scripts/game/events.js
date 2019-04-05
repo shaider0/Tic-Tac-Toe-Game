@@ -82,15 +82,9 @@ const onGetGames = function () {
     .catch(ui.getGamesFailure)
 }
 
-// const indexExample = function () {
-//   return $.ajax({
-//     url: config.apiUrl + '/examples',
-//     method: 'GET'
-//   })
-// }
-
 const onShowChangePasswordForm = function () {
   $('#change-password-form').show()
+  $('#change-password-message').text('')
 }
 
 const onCreate = function (event) {

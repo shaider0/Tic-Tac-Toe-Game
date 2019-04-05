@@ -17,10 +17,10 @@ const signInSuccess = function (formData) {
   store.user = formData.user
   $('#sign-up').hide()
   $('#sign-in').hide()
-  $('#show-change-password-form').show()
-  $('#create').show()
-  $('#statistics').show(800)
-  $('#sign-out').show()
+  $('#create').show(500)
+  $('#statistics').show(600)
+  $('#show-change-password-form').show(700)
+  $('#sign-out').show(800)
 }
 
 const signInFailure = function (formData) {
@@ -28,11 +28,16 @@ const signInFailure = function (formData) {
 }
 
 const changePwSuccess = function () {
+  $('#change-password-message').show()
   $('#change-password-message').text('Password changed!')
+  $('#show-change-password-form').show()
+  $('#change-password-form').hide()
+  $('form').trigger('reset')
 }
 
 const changePwFailure = function () {
-  console.log('change password failure')
+  $('#change-password-message').text('Current password is incorrect. Please try again.')
+  $('form').trigger('reset')
 }
 
 const signOutSuccess = function () {

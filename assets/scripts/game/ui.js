@@ -27,6 +27,7 @@ const createGameSuccess = function (game) {
   store.gameId = game.game.id
   console.log('game id in store is', store.gameId)
   $('.box').text('')
+  $('#winner-display').show()
   $('#winner-display').text('')
   $('#game-board').show(800)
   store.gameOver = false
@@ -34,6 +35,9 @@ const createGameSuccess = function (game) {
   const turn = store.currentPlayer
   $('#turn').text(turn)
   $('#turn-display').show()
+  $('#change-password-message').text('')
+  $('#statistics').hide()
+  $('#change-password-form').hide()
 }
 
 const returnId = function () {

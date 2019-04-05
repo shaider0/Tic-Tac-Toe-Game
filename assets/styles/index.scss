@@ -9,13 +9,17 @@ body {
 }
 
 .container {
-  width: 500px;
+  width: 450px;
+}
+
+#game-board {
+  margin: 25px 0;
 }
 
 .box {
   text-align: center;
   padding-top: 15px;
-  height: 100px;
+  height: 115px;
   font-size: 50px;
 }
 
@@ -50,5 +54,11 @@ body {
 }
 
 #turn-display, #winner-display {
+  background-color: white;
+  border-radius: 5px;
   text-align: center;
+}
+
+.btn {
+  margin: 20px 0;
 }

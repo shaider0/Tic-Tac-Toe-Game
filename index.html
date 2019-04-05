@@ -69,14 +69,6 @@
         <h4 id="winner-display"></h4>
       </div>
 
-      <!--CHANGE PW FORM-->
-      <form id="change-password-form">
-        <h3>Change Password</h3>
-        <input required type="password" name="passwords[old]" placeholder="current password">
-        <input required type="password" name="passwords[new]" placeholder="new password">
-        <input class="col-12" type="submit" value="change password now">
-      </form>
-
       <!--STATISTICS-->
       <div id="statistics">
         <button class="col-12 btn btn-primary" id="getGames">See all game stats</button>
@@ -88,6 +80,13 @@
         <button id="show-change-password-form" class="col-12 btn btn-primary">Change Password</button>
         <p id="change-password-message"></p>
       </div>
+
+      <!--CHANGE PW FORM-->
+      <form id="change-password-form">
+        <input required type="password" name="passwords[old]" placeholder="current password">
+        <input required type="password" name="passwords[new]" placeholder="new password">
+        <input class="col-12 btn btn-primary" type="submit" value="change password now">
+      </form>
 
       <!--SIGN OUT-->
       <form id="sign-out">
