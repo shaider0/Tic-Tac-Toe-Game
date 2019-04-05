@@ -20,18 +20,18 @@ const createGame = function () {
   })
 }
 
-const updateGame = function (gameId) {
+const updateGame = function () {
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameId,
+    url: config.apiUrl + '/games/' + store.gameId,
     method: 'PATCH',
     headers: {authorization: 'Token token=' + store.user.token},
     data: {
       'game': {
         'cell': {
-          'index': 0,
-          'value': 'x'
+          'index': store.index,
+          'value': store.value
         },
-        'over': false
+        'over': store.gameOver
       }
     }
   })

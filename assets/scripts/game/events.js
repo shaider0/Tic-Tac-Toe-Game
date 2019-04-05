@@ -65,6 +65,8 @@ const onClick = function (event) {
   const text = $(event.target).text()
   if (!text && !store.gameOver) {
     $(event.target).text(store.currentPlayer)
+    store.index = $(event.target).attr('data-index')
+    store.value = $(event.target).text()
     onUpdate()
     // let index = $(event.target).attr('data-index')
     // console.log('the index is ', index)

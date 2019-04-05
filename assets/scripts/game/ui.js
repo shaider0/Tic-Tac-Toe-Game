@@ -24,7 +24,8 @@ let gameId
 
 const createGameSuccess = function (game) {
   console.log('Game successfully created!', game)
-  gameId = game.game.id
+  store.gameId = game.game.id
+  console.log('game id in store is', store.gameId)
   $('.box').text('')
   $('#winner-display').text('')
   $('#game-board').show(800)
@@ -39,7 +40,7 @@ const returnId = function () {
   return gameId
 }
 const createGameFailure = function () {
-  console.log('Game successfully created!')
+  console.log('Game failed to create')
 }
 
 const updateSuccess = function (game) {
