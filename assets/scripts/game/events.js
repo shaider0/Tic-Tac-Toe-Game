@@ -3,18 +3,18 @@
 const getFormFields = require('./../../../lib/get-form-fields.js')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
 
-let gameLock = false
-let currentPlayer = 'X'
-
+// Switch player
 const switchPlayer = function () {
-  if (currentPlayer === 'X') {
-    currentPlayer = 'O'
+  if (store.currentPlayer === 'X') {
+    store.currentPlayer = 'O'
   } else {
-    currentPlayer = 'X'
+    store.currentPlayer = 'X'
   }
 }
 
+// Check for end-game and display result
 const checkWinner = function () {
   const zero = $('.zero').text()
   const one = $('.one').text()
@@ -28,7 +28,6 @@ const checkWinner = function () {
 
   if (
     // horizontal winning combinations
-    // if zero, three, and 6 are truthy
     (zero && zero === one && one === two) ||
     (three && three === four && four === five) ||
     (six && six === seven && seven === eight) ||
@@ -42,15 +41,18 @@ const checkWinner = function () {
     (zero && zero === four && four === eight) ||
     (two && two === four && four === six)
   ) {
+    $('#turn-display').hide()
     switchPlayer()
-    $('#winner-display').text(`Player ${currentPlayer} wins!`)
-    gameLock = true
+    $('#winner-display').text(`Player ${store.currentPlayer} wins!`)
+    store.gameOver = true
   } else if (zero && one && two && three && four && five && six && seven && eight) {
+    $('#turn-display').hide()
     $('#winner-display').text('It\'s a tie!')
-    gameLock = true
+    store.gameOver = true
   }
 }
 
+// Send game state to API on each move
 const onUpdate = function () {
   const gameId = ui.returnId()
   api.updateGame(gameId)
@@ -58,16 +60,16 @@ const onUpdate = function () {
     .catch(ui.updateFailure)
 }
 
+// While game is not over, place X or O on the board depending on turn
 const onClick = function (event) {
   const text = $(event.target).text()
-  if (!text && !gameLock) {
-    $(event.target).text(currentPlayer)
+  if (!text && !store.gameOver) {
+    $(event.target).text(store.currentPlayer)
     onUpdate()
     // let index = $(event.target).attr('data-index')
     // console.log('the index is ', index)
-
-    // push index to API, data ID
     switchPlayer()
+    $('#turn').text(store.currentPlayer)
     checkWinner()
   }
 }
@@ -102,13 +104,6 @@ const addHandlers = function () {
   $('#getGames').on('click', onGetGames)
   $('#show-change-password-form').on('click', onShowChangePasswordForm)
 }
-
-$('#restart').on('click', function () {
-  $('.box').text('')
-  $('#winner-display').text('')
-  gameLock = false
-  currentPlayer = 'X'
-})
 
 module.exports = {
   addHandlers

@@ -12,6 +12,7 @@ $(() => {
   $('#create').hide()
   $('#sign-out').hide()
   $('#game-board').hide()
+  $('#turn-display').hide()
   $('#show-change-password-form').hide()
   $('#change-password-form').hide()
   $('#restart').hide()

@@ -1,4 +1,5 @@
 const store = require('../store')
+const events = require('./events')
 
 // const signUpSuccess = function (formData) {
 //   console.log('sign up success ran with the data: ', formData)
@@ -27,6 +28,11 @@ const createGameSuccess = function (game) {
   $('.box').text('')
   $('#winner-display').text('')
   $('#game-board').show(800)
+  store.gameOver = false
+  store.currentPlayer = 'X'
+  const turn = store.currentPlayer
+  $('#turn').text(turn)
+  $('#turn-display').show()
 }
 
 const returnId = function () {
