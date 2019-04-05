@@ -10,10 +10,10 @@ const events = require('./events')
 //   console.log('sign up failure ran with the data: ', formData)
 // }
 
-const getGamesSuccess = function (formData) {
-  console.log('get games succeeeded: ', formData)
-  const gamesData = JSON.stringify(formData.games)
-  $('#stats-display').text('Games: ' + gamesData)
+const getGamesSuccess = function (games) {
+  console.log('get games succeeeded: ', games)
+  const numberOfGamesPlayed = games.games.length
+  $('#stats-display').text('Total Games Played: ' + numberOfGamesPlayed)
 }
 
 const getGamesFailure = function (formData) {
