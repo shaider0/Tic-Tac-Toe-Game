@@ -3,6 +3,7 @@
 body {
   background-color: #232323;
   text-align: center;
+  color: white;
 }
 
 .title {
@@ -24,10 +25,6 @@ h4 {
 input {
   border-radius: 5px;
   margin: 1px;
-}
-
-#sign-up-form p {
-  color: white;
 }
 
 .box {
@@ -53,7 +50,7 @@ input {
   justify-content: center;
 }
 
-#game-stuff {
+.game-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -61,10 +58,11 @@ input {
   margin: auto;
 }
 
-#turn-display, #winner-display {
-  background-color: #37dea0;
+#game-display {
+  background-color: black;
+  padding: 1px;
+  border: 2px solid white;
   border-radius: 5px;
-  border: 2px solid #232323;
   text-align: center;
 }
 

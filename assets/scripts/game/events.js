@@ -41,21 +41,18 @@ const checkWinner = function () {
     (zero && zero === four && four === eight) ||
     (two && two === four && four === six)
   ) {
-    $('#turn-display').hide()
     switchPlayer()
-    $('#winner-display').text(`Player ${store.currentPlayer} wins!`)
+    $('#game-display').text(`Player ${store.currentPlayer} wins!`)
     store.gameOver = true
   } else if (zero && one && two && three && four && five && six && seven && eight) {
-    $('#turn-display').hide()
-    $('#winner-display').text('It\'s a tie!')
+    $('#game-display').text('It\'s a tie!')
     store.gameOver = true
   }
 }
 
 // Send game state to API on each move
 const onUpdate = function () {
-  const gameId = ui.returnId()
-  api.updateGame(gameId)
+  api.updateGame(store.gameId)
     .then(ui.updateSuccess)
     .catch(ui.updateFailure)
 }
@@ -68,10 +65,8 @@ const onClick = function (event) {
     store.index = $(event.target).attr('data-index')
     store.value = $(event.target).text()
     onUpdate()
-    // let index = $(event.target).attr('data-index')
-    // console.log('the index is ', index)
     switchPlayer()
-    $('#turn').text(store.currentPlayer)
+    $('#game-display').text('Player ' + store.currentPlayer + '\'s turn')
     checkWinner()
   }
 }
@@ -95,7 +90,6 @@ const onCreate = function (event) {
 }
 
 const addHandlers = function () {
-
   $('#create').on('submit', onCreate)
   $('.box').on('click', onClick)
   $('#getGames').on('click', onGetGames)

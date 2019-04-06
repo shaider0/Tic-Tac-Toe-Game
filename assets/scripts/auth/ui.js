@@ -19,7 +19,7 @@ const signInSuccess = function (formData) {
   console.log('sign in success: ', formData)
   store.user = formData.user
   $('.sign-up-sign-in-div').hide()
-  $('#create').show(500)
+  $('.play-now-div').show()
   $('#statistics').show(600)
   $('#show-change-password-form').show(700)
   $('#sign-out').show(800)
@@ -47,10 +47,9 @@ const changePwFailure = function () {
 const signOutSuccess = function () {
   store.user = null
   $('.sign-up-sign-in-div').show()
-  $('#game-board').hide()
+  $('#game-div').hide()
   $('#change-password-form').hide()
-  $('#winner-display').hide()
-  $('#turn-display').hide()
+  $('#game-display').hide()
   $('#show-change-password-form').hide()
   $('#change-password-message').hide()
   $('#create').hide()
@@ -63,10 +62,6 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
 
 }
-
-// $('.show-sign-in').on('click', function () {
-//   $('sign-in-div').show()
-// })
 
 module.exports = {
   signInSuccess,
