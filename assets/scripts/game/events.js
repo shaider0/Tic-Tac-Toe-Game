@@ -95,6 +95,7 @@ const onCreate = function (event) {
 }
 
 const addHandlers = function () {
+
   $('#create').on('submit', onCreate)
   $('.box').on('click', onClick)
   $('#getGames').on('click', onGetGames)

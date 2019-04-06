@@ -36,7 +36,6 @@ const createGameSuccess = function (game) {
   $('#turn').text(turn)
   $('#turn-display').show()
   $('#change-password-message').text('')
-  $('#statistics').hide()
   $('#change-password-form').hide()
 }
 

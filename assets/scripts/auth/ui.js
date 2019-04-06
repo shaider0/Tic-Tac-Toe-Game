@@ -6,25 +6,29 @@ const store = require('../store')
 const signUpSuccess = function (formData) {
   console.log('sign up success ran with the data: ', formData)
   $('form').trigger('reset')
+  $('#sign-up-form-display').text('New account created! Please sign in below.')
 }
 
 const signUpFailure = function (formData) {
   console.log('sign up failure ran with the data: ', formData)
+  $('form').trigger('reset')
+  $('#sign-up-form-display').text('Something went wrong. Either the passwords did not match, or the email address is already registered. Please try again.')
 }
 
 const signInSuccess = function (formData) {
   console.log('sign in success: ', formData)
   store.user = formData.user
-  $('#sign-up').hide()
-  $('#sign-in').hide()
+  $('.sign-up-sign-in-div').hide()
   $('#create').show(500)
   $('#statistics').show(600)
   $('#show-change-password-form').show(700)
   $('#sign-out').show(800)
+  $('#sign-up-form-display').text('')
 }
 
 const signInFailure = function (formData) {
-  console.log('sign in failed: ', formData)
+  $('#sign-in-display').text('Please try again')
+  $('form').trigger('reset')
 }
 
 const changePwSuccess = function () {
@@ -41,10 +45,8 @@ const changePwFailure = function () {
 }
 
 const signOutSuccess = function () {
-  console.log('sign out successful!')
   store.user = null
-  $('#sign-up').show()
-  $('#sign-in').show()
+  $('.sign-up-sign-in-div').show()
   $('#game-board').hide()
   $('#change-password-form').hide()
   $('#winner-display').hide()
@@ -55,11 +57,16 @@ const signOutSuccess = function () {
   $('#statistics').hide()
   $('#sign-out').hide()
   $('form').trigger('reset')
+  $('#sign-in-display').text('')
 }
 
 const signOutFailure = function () {
-  console.log('sign out failed!')
+
 }
+
+// $('.show-sign-in').on('click', function () {
+//   $('sign-in-div').show()
+// })
 
 module.exports = {
   signInSuccess,
