@@ -26,7 +26,7 @@ const createGameSuccess = function (game) {
 }
 
 const createGameFailure = function () {
-  // display something to the user if the game fails to load (e.g., if API is down)
+  $('#error-message').text('Something went wrong. Please try again')
 }
 
 const updateSuccess = function (game) {
@@ -35,8 +35,7 @@ const updateSuccess = function (game) {
 }
 
 const updateFailure = function () {
-  // do i need this?
-  console.log('Game failed to update!')
+  $('#error-message').text('Something went wrong. Please try again')
 }
 
 module.exports = {

@@ -41,15 +41,16 @@ input {
 .box {
   text-align: center;
   height: 115px;
-  font-size: 50px;
+  font-size: 60px;
   color: white;
+  font-weight: bold;
 }
 
-@media (max-width: 600px) {
-  .box {
-    height: 85px;
-  }
-}
+// @media (max-width: 600px) {
+//   .box {
+//     height: 95px;
+//   }
+// }
 
 .one, .four, .seven {
   border-left: 10px ridge white;
@@ -61,10 +62,10 @@ input {
   border-bottom: 10px ridge white;
 }
 
-.row-1, .row-2, .row-3 {
-  display: flex;
-  justify-content: center;
-}
+// .row-1, .row-2, .row-3 {
+//   display: flex;
+//   justify-content: center;
+// }
 
 .play-now-div,
 .stats-div,
@@ -93,15 +94,21 @@ input {
 
 
 .game-div {
-  width: 470px;
+  width: 350px;
   margin: 0 auto;
 }
 
-.game-board {
-  width: 400px;
-  height: 425px;
-  margin: 0 auto;
+@media (max-width: 600px) {
+  .game-div {
+    width: 300px;
+  }
 }
+
+// .game-board {
+//   width: 400px;
+//   height: 425px;
+//   margin: 0 auto;
+// }
 
 @media (max-width: 600px) {
   .game-div, .game-board, {
@@ -132,6 +139,7 @@ input {
 #change-password-display,
 #sign-up-display,
 #sign-in-display,
-#stats-display {
+#stats-display,
+#error-message {
   color: #10d16a;
 }

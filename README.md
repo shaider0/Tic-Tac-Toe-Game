@@ -1,62 +1,34 @@
 <!--Add styles based on markdown cheatsheet if time-->
-Welcome to T1c-Tac-T0e, my first deployed application as a software engineer! This README will walk you through my development process & how the application works. Hope you enjoy :0)
+Welcome to tic-tac-toe, my first deployed application as a software engineer! This README will walk you through my development process & how the application works. Hope you enjoy :-)
 
-Development Process
+Development Process:
 
-Reminders:
-
--Commit early and often. If you screw something up, use git reset.
-
-
-Steps (high-level):
-
-- [X]Gather all the documentation and understand the project at a high level
-- [X]Review all the documentation carefully and understand the requirements at
-      a low level
-- [X]Brainstorm & Diagram
-- [ ]Get working code
-- [ ]Optimize code
-- [ ]Add styles
-- [ ]Add features (time permitting)
-
-Gather & Review Resources:
-
-  https://git.generalassemb.ly/ga-wdi-boston/game-project
-  Game Project Requirements
-
-  https://git.generalassemb.ly/ga-wdi-boston/game-project-api
-  Game Project API Documents
-
-  https://git.generalassemb.ly/ga-wdi-boston/game-project-scope-study
-  Game project scope study
-
-  https://git.generalassemb.ly/ga-wdi-boston/gh-pages-deployment-guide
-  Github Deployment guide
-
-  https://gist.git.generalassemb.ly/SHaider0/fe5349d05a6e992712e63af70612de47
-  Explains the pattern used at GA for creating modular code. This includes having different files for HTML, HTTP requests, event handlers, and dom updates.
-
-  https://git.generalassemb.ly/ga-wdi-boston/html-css-sass
-  SASS
-
-  https://git.generalassemb.ly/ga-wdi-boston/html-css-bootstrap-layout
-  Bootstrap
-
-  https://git.generalassemb.ly/SHaider0/project-issue-tracker-guide
-  Issue tracker guide
-
-Brainstorm & Diagram
+- [X]Review requirements documentation for big picture as well as detailed expectations for the project
+- [X]Brainstorm and diagram out some of the core functions of the application and start thinking about how you will approach it.
+- [X]Write out user stories and build a wireframe
+- [X]Build the game board (HTML & CSS)
+- [X]Get clicks to represent X's and O's on the board (jQuery)
+- [X]Write the game logic (JavaScript conditional statements to check for the various possible winning scenarios and tie scenarios)
+- [X]Interact with the API to create a game, update an array representing the various board positions with each click, and retrieve total games played. Also interact with the API to allow users to sign up, sign in, change password, and sign out. (AJAX, read API documentation)
+- [X]Look for opportunities to make code DRY
+- [X]Add basic styles
+- [X]Work on stretch goals (time permitting)
 
   User Stories
 
-  * First time users can create an account so they can access the game and keep track of their statistics
-  * Returning users can log in so they can access the game and continue to add to their statistics
-  * During gameplay, users can see whose turn it is
-  * During gameplay, users can click to place their symbol on a spot on the game board
-  * After starting a game, users can reset the game board at any time to start a new game.
-  * At any point after logging in, users can log out
+  * First time users will want to create an account so they can access the game and keep track of their statistics
+  * Returning users will want to log in so they can play the game
+  * During gameplay, users will want to see whose turn it is
+  * During gameplay, users will want the board to display their clicks as either Xs or Os
+  * Users will want to have the ability to start a new game at any point without refreshing the page
+  * Users will want to be able to log out at any time
 
-Application Design
+  Wireframes
 
-  Game board: HTML/Bootstrap
-  Moves: Event handlers
+  Technologies Used:
+
+  HTML
+  CSS
+  Bootstrap
+  Javascript
+  jQuery
