@@ -16,15 +16,8 @@ h4 {
   text-align: left;
 }
 
-
-.sign-up-sign-in-div {
-  width: 475px;
-  height: 475px;
-}
-
 input {
   border-radius: 5px;
-  margin: 1px;
 }
 
 .box {
@@ -50,22 +43,43 @@ input {
   justify-content: center;
 }
 
+.play-now-div {
+  padding-bottom: 15px;
+}
+
 .game-div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  width: 430px;
   margin: auto;
+}
+
+.game-board {
+  padding: 10px;
 }
 
 #game-display {
   background-color: black;
-  padding: 1px;
+  margin: 10px;
+  padding: 5px;
   border: 2px solid white;
   border-radius: 5px;
   text-align: center;
+  width: 475px;
 }
 
-.btn {
-  margin: 5px 0;
+.change-password-form-div {
+  width: 250px;
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.change-password-form-div input {
+  margin: 10px;
+}
+
+#stats-display {
+  padding-top: 5px;
 }

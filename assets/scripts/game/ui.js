@@ -4,6 +4,10 @@ const events = require('./events')
 const getGamesSuccess = function (games) {
   const numberOfGamesPlayed = games.games.length
   $('#stats-display').text('Total Games Played: ' + numberOfGamesPlayed)
+  setTimeout(function () {
+    $('#stats-display').text('')
+  }, 5000
+  )
 }
 
 const getGamesFailure = function (formData) {
@@ -17,8 +21,8 @@ const createGameSuccess = function (game) {
   store.gameOver = false
   store.currentPlayer = 'X'
   $('#game-display').text('Player ' + store.currentPlayer + '\'s turn')
-  $('#change-password-message').text('')
-  $('#change-password-form').hide()
+  $('#change-password-display').text('')
+  $('.change-password-form-div').hide()
 }
 
 const createGameFailure = function () {

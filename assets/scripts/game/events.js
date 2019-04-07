@@ -77,11 +77,6 @@ const onGetGames = function () {
     .catch(ui.getGamesFailure)
 }
 
-const onShowChangePasswordForm = function () {
-  $('#change-password-form').show()
-  $('#change-password-message').text('')
-}
-
 const onCreate = function (event) {
   event.preventDefault()
   api.createGame()
@@ -93,7 +88,6 @@ const addHandlers = function () {
   $('#create').on('submit', onCreate)
   $('.box').on('click', onClick)
   $('#getGames').on('click', onGetGames)
-  $('#show-change-password-form').on('click', onShowChangePasswordForm)
 }
 
 module.exports = {

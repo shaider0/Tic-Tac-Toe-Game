@@ -4,15 +4,13 @@
 const store = require('../store')
 
 const signUpSuccess = function (formData) {
-  console.log('sign up success ran with the data: ', formData)
   $('form').trigger('reset')
-  $('#sign-up-form-display').text('New account created! Please sign in below.')
+  $('#sign-up-display').text('New account created! Please sign in below.')
 }
 
 const signUpFailure = function (formData) {
-  console.log('sign up failure ran with the data: ', formData)
   $('form').trigger('reset')
-  $('#sign-up-form-display').text('Something went wrong. Either the passwords did not match, or the email address is already registered. Please try again.')
+  $('#sign-up-display').text('Something went wrong. Please try again.')
 }
 
 const signInSuccess = function (formData) {
@@ -20,10 +18,11 @@ const signInSuccess = function (formData) {
   store.user = formData.user
   $('.sign-up-sign-in-div').hide()
   $('.play-now-div').show()
-  $('#statistics').show(600)
-  $('#show-change-password-form').show(700)
-  $('#sign-out').show(800)
-  $('#sign-up-form-display').text('')
+  $('.game-div').hide()
+  $('.stats-div').show()
+  $('.change-password-button-div').show()
+  $('.change-password-form-div').hide()
+  $('.sign-out-div').show()
 }
 
 const signInFailure = function (formData) {
@@ -31,36 +30,46 @@ const signInFailure = function (formData) {
   $('form').trigger('reset')
 }
 
+const showChangePasswordForm = function () {
+  $('.change-password-form-div').show()
+}
+
 const changePwSuccess = function () {
-  $('#change-password-message').show()
-  $('#change-password-message').text('Password changed!')
-  $('#show-change-password-form').show()
-  $('#change-password-form').hide()
+  $('#change-password-display').text('Password changed!')
+  $('.change-password-form-div').hide()
   $('form').trigger('reset')
+  setTimeout(function () {
+    $('#change-password-display').text('')
+  }, 5000
+  )
 }
 
 const changePwFailure = function () {
-  $('#change-password-message').text('Current password is incorrect. Please try again.')
+  $('#change-password-display').text('Something went wrong. Please try again.')
   $('form').trigger('reset')
 }
 
 const signOutSuccess = function () {
   store.user = null
-  $('.sign-up-sign-in-div').show()
-  $('#game-div').hide()
-  $('#change-password-form').hide()
-  $('#game-display').hide()
-  $('#show-change-password-form').hide()
-  $('#change-password-message').hide()
-  $('#create').hide()
-  $('#statistics').hide()
-  $('#sign-out').hide()
   $('form').trigger('reset')
+  $('.sign-up-sign-in-div').show()
+  $('.play-now-div').hide()
+  $('.game-div').hide()
+  $('.stats-div').hide()
+  $('.change-password-button-div').hide()
+  $('.change-password-form-div').hide()
+  $('.sign-out-div').hide()
+
+  $('#sign-up-display').text('')
   $('#sign-in-display').text('')
+  $('#game-display').text('')
+  $('#stats-display').text('')
+  $('#change-password-display').text('')
+  $('#sign-out-display').text('')
 }
 
 const signOutFailure = function () {
-
+  $('#sign-out-display').text('Please try again later')
 }
 
 module.exports = {
@@ -68,6 +77,7 @@ module.exports = {
   signInFailure,
   signUpSuccess,
   signUpFailure,
+  showChangePasswordForm,
   changePwSuccess,
   changePwFailure,
   signOutSuccess,
