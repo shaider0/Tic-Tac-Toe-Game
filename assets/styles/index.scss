@@ -26,6 +26,12 @@ input {
   width: 500px;
 }
 
+@media (max-width: 600px) {
+  .sign-up-sign-in-div {
+    width: 350px;
+  }
+}
+
 .sign-up-sign-in-div input,
 .change-password-form-div input {
   margin: 2px 0;
@@ -37,6 +43,12 @@ input {
   height: 115px;
   font-size: 50px;
   color: white;
+}
+
+@media (max-width: 600px) {
+  .box {
+    height: 85px;
+  }
 }
 
 .one, .four, .seven {
@@ -64,6 +76,16 @@ input {
   margin: 0 auto;
 }
 
+@media (max-width: 600px) {
+  .play-now-div,
+  .stats-div,
+  .change-password-button-div,
+  .change-password-form-div,
+  .sign-out-div {
+    width: 350px;
+  }
+}
+
 .play-now-div {
   height: 69px;
   margin-top: 50px;
@@ -81,6 +103,12 @@ input {
   margin: 0 auto;
 }
 
+@media (max-width: 600px) {
+  .game-div, .game-board, {
+    width: 350px;
+  }
+}
+
 #game-display {
   background-color: black;
   border: 2px solid white;
@@ -93,6 +121,12 @@ input {
 .change-password-form-div {
   width: 500px;
   margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .change-password-form-div{
+    width: 350px;
+  }
 }
 
 #change-password-display,
