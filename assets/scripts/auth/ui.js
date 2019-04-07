@@ -14,7 +14,6 @@ const signUpFailure = function (formData) {
 }
 
 const signInSuccess = function (formData) {
-  console.log('sign in success: ', formData)
   store.user = formData.user
   $('.sign-up-sign-in-div').hide()
   $('.play-now-div').show()

@@ -6,7 +6,6 @@ const ui = require('./ui')
 const store = require('../store')
 
 const onSignUp = function (event) {
-  console.log('event is', event)
   event.preventDefault()
   const formData = getFormFields(event.target)
   api.signUp(formData)

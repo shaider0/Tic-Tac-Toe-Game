@@ -18,11 +18,22 @@ h4 {
 
 input {
   border-radius: 5px;
+  margin: 0 auto;
 }
+
+.sign-up-sign-in-div {
+  margin: 0 auto;
+  width: 500px;
+}
+
+.sign-up-sign-in-div input,
+.change-password-form-div input {
+  margin: 2px 0;
+}
+
 
 .box {
   text-align: center;
-  padding-top: 15px;
   height: 115px;
   font-size: 50px;
   color: white;
@@ -43,43 +54,50 @@ input {
   justify-content: center;
 }
 
-.play-now-div {
+.play-now-div,
+.stats-div,
+.change-password-button-div,
+.change-password-form-div,
+.sign-out-div {
+  width: 500px;
   padding-bottom: 15px;
+  margin: 0 auto;
 }
 
+.play-now-div {
+  height: 69px;
+  margin-top: 50px;
+}
+
+
 .game-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  width: 430px;
-  margin: auto;
+  width: 470px;
+  margin: 0 auto;
 }
 
 .game-board {
-  padding: 10px;
+  width: 400px;
+  height: 425px;
+  margin: 0 auto;
 }
 
 #game-display {
   background-color: black;
-  margin: 10px;
-  padding: 5px;
   border: 2px solid white;
   border-radius: 5px;
   text-align: center;
-  width: 475px;
+  margin: 20px 0;
+  padding: 5px 0;
 }
 
 .change-password-form-div {
-  width: 250px;
-  margin: 10px auto;
-  padding: 10px;
+  width: 500px;
+  margin: 0 auto;
 }
 
-.change-password-form-div input {
-  margin: 10px;
-}
-
+#change-password-display,
+#sign-up-display,
+#sign-in-display,
 #stats-display {
-  padding-top: 5px;
+  color: #10d16a;
 }

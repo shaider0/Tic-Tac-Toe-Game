@@ -26,14 +26,16 @@ const createGameSuccess = function (game) {
 }
 
 const createGameFailure = function () {
-  console.log('Game failed to create')
+  // display something to the user if the game fails to load (e.g., if API is down)
 }
 
 const updateSuccess = function (game) {
+  // do i need this?
   console.log('Game successfully updated!', game)
 }
 
 const updateFailure = function () {
+  // do i need this?
   console.log('Game failed to update!')
 }
 
