@@ -72,7 +72,7 @@ const onClick = function (event) {
     $('#invalid-move').show()
     setTimeout(function () {
       $('#invalid-move').hide()
-    }, 3000
+    }, 1500
     )
   }
 }
