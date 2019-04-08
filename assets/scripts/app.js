@@ -17,7 +17,6 @@ $(() => {
   $('.change-password-form-div').hide()
   $('.sign-out-div').hide()
   $('#invalid-move').hide()
-
   $('#sign-up-display').text('')
   $('#sign-in-display').text('')
   $('#game-display').text('')

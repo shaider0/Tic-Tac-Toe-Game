@@ -30,8 +30,6 @@ const createGameFailure = function () {
 }
 
 const updateSuccess = function (game) {
-  // do i need this?
-  console.log('Game successfully updated!', game)
 }
 
 const updateFailure = function () {

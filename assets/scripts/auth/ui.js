@@ -39,7 +39,7 @@ const changePwSuccess = function () {
   $('form').trigger('reset')
   setTimeout(function () {
     $('#change-password-display').text('')
-  }, 5000
+  }, 2000
   )
 }
 
