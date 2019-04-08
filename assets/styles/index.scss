@@ -1,35 +1,29 @@
 @import '~bootstrap/scss/bootstrap';
 
+$border: 10px ridge white;
+$blue: #2296de;
+
 body {
   background-color: #232323;
   text-align: center;
   color: white;
+  margin: 0 auto;
 }
 
 .title {
   color: #999999;
   margin: 10px auto;
+  padding-bottom: 10px;
 }
 
-h4 {
-  color: #2296de;
+.subtitle {
+  color: $blue;
   text-align: left;
 }
 
-input {
-  border-radius: 5px;
-  margin: 0 auto;
-}
-
-.sign-up-sign-in-div {
-  margin: 0 auto;
-  width: 500px;
-}
-
-@media (max-width: 600px) {
-  .sign-up-sign-in-div {
-    width: 350px;
-  }
+input, .btn {
+  border-radius: 7px;
+  margin: 2px auto;
 }
 
 .sign-up-sign-in-div input,
@@ -41,102 +35,87 @@ input {
   padding: 15px;
 }
 
+.game-board-row {
+  display: flex;
+  justify-content: center;
+}
+
 .box {
   text-align: center;
-  height: 115px;
-  font-size: 60px;
+  vertical-align: middle;
+  border: $border;
+  width: 140px;
+  height: 120px;
+  font-size: 70px;
   color: white;
   font-weight: bold;
 }
 
-// @media (max-width: 600px) {
-//   .box {
-//     height: 95px;
-//   }
-// }
-
-.one, .four, .seven {
-  border-left: 10px ridge white;
-  border-right: 10px ridge white;
+.zero,
+.three,
+.six {
+  border-left: 0;
 }
 
-.three, .four, .five {
-  border-top: 10px ridge white;
-  border-bottom: 10px ridge white;
+.zero,
+.one,
+.two {
+  border-top: 0;
 }
 
-// .row-1, .row-2, .row-3 {
-//   display: flex;
-//   justify-content: center;
-// }
+.two,
+.five,
+.eight {
+  border-right: 0;
+}
 
-.play-now-div,
+.six,
+.seven,
+.eight {
+  border-bottom: 0;
+}
+
+.sign-up-sign-in-div,
 .stats-div,
 .change-password-button-div,
 .change-password-form-div,
 .sign-out-div {
   width: 500px;
-  padding-bottom: 15px;
   margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-  .play-now-div,
-  .stats-div,
-  .change-password-button-div,
-  .change-password-form-div,
-  .sign-out-div {
-    width: 350px;
-  }
+  padding-bottom: 30px 0;
 }
 
 .play-now-div {
-  height: 69px;
-  margin-top: 50px;
+  width: 300px;
+  height: 40px;
+  margin: 0 auto;
+  vertical-align: center;
+  padding-bottom: 90px;
 }
 
+#play-now-button {
+  font-size: 25px;
+  font-weight: bold;
+}
 
 .game-div {
-  width: 350px;
-  margin: 0 auto;
-}
-
-@media (max-width: 600px) {
-  .game-div {
-    width: 300px;
-  }
-}
-
-// .game-board {
-//   width: 400px;
-//   height: 425px;
-//   margin: 0 auto;
-// }
-
-@media (max-width: 600px) {
-  .game-div, .game-board, {
-    width: 350px;
-  }
-}
-
-#game-display {
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 5px;
-  text-align: center;
-  margin: 20px 0;
-  padding: 5px 0;
-}
-
-.change-password-form-div {
   width: 500px;
   margin: 0 auto;
 }
 
-@media (max-width: 600px) {
-  .change-password-form-div{
-    width: 350px;
-  }
+#game-display {
+  background-color: black;
+  color: $blue;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 5px 0;
+  width: 500px;
+}
+
+#change-password-form input {
+  margin-bottom: 15px;
 }
 
 #change-password-display,
@@ -146,4 +125,24 @@ input {
 #stats-display,
 #error-message {
   color: #10d16a;
+}
+
+@media (max-width: 500px) {
+  .sign-up-sign-in-div,
+  .game-div,
+  #game-display,
+  .stats-div,
+  .change-password-button-div,
+  .change-password-form-div,
+  .sign-out-div {
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
 }

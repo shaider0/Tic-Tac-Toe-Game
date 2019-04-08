@@ -15,72 +15,63 @@
 
   <body>
 
-  <h1 class="title">tic-tac-toe</h1>
+    <h1 class="title">tic-tac-toe</h1>
+    <div class="container">
 
-  <div class="container">
-
-    <div class="sign-up-sign-in-div">
-      <!--SIGN UP-->
-      <div class=sign-up-div>
-        <form id="sign-up-form">
-          <h4 class="col-12">Sign up</h4>
-          <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-          <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
-          <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-          <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
-          <p id="sign-up-display"></p>
-          <p>Already registered? Sign in below</p>
+      <div class="sign-up-sign-in-div">
+        <!--SIGN UP-->
+        <div class=sign-up-div>
+          <form id="sign-up-form">
+            <h4 class="col-12 subtitle">Sign up</h4>
+            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
+            <input required class="col-12" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input class="col-12 btn btn-dark" type="submit" value="Sign up!">
+            <p id="sign-up-display"></p>
+            <p>Already registered? Sign in below</p>
+          </form>
+        </div>
+        <!--SIGN IN-->
+        <div class="sign-in-div">
+          <form id="sign-in">
+            <h4 class="col-12 subtitle">Sign in</h4>
+            <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
+            <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
+            <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
+            <p id="sign-in-display"></p>
+          </form>
+        </div>
+      </div>
+      <!--START NEW GAME-->
+      <div class="play-now-div">
+        <form id="create">
+          <input id="play-now-button" type="submit" value="START A NEW GAME!" class="col-12 btn btn-success">
         </form>
       </div>
-
-      <!--SIGN IN-->
-      <div class="sign-in-div">
-        <form id="sign-in">
-          <h4 class="col-12">Sign in</h4>
-          <input required class="col-12" type="email" name="credentials[email]" placeholder="Email">
-          <input required class="col-12" type="password" name="credentials[password]" placeholder="Password">
-          <input class="col-12 btn btn-dark" type="submit" value="Sign in!">
-          <p id="sign-in-display"></p>
-        </form>
-      </div>
-
-    </div>
-
-
-    <!--START NEW GAME-->
-    <div class="play-now-div">
-      <form id="create">
-        <input id="play-now-button" type="submit" value="Start a New Game!" class="col-12 btn btn-success">
-      </form>
-    </div>
-
-    <div class="game-div">
-      <div class="game-board">
-        <div class="row d-flex justify-content-center align-content-center">
-          <div class="col-4 box zero" data-index=0></div>
-          <div class="col-4 box one" data-index=1></div>
-          <div class="col-4 box two" data-index=2></div>
+      <!-- GAME -->
+      <div class="game-div">
+        <div class="game-board-row">
+          <div class="box zero" data-index=0></div>
+          <div class="box one" data-index=1></div>
+          <div class="box two" data-index=2></div>
         </div>
-        <div class="row d-flex justify-content-center align-content-center">
-          <div class="col-4 box three" data-index=3></div>
-          <div class="col-4 box four" data-index=4></div>
-          <div class="col-4 box five" data-index=5></div>
+        <div class="game-board-row">
+          <div class="box three" data-index=3></div>
+          <div class="box four" data-index=4></div>
+          <div class="box five" data-index=5></div>
         </div>
-        <div class="row d-flex justify-content-center align-content-center">
-          <div class="col-4 box six" data-index=6></div>
-          <div class="col-4 box seven" data-index=7></div>
-          <div class="col-4 box eight" data-index=8></div>
+        <div class="game-board-row">
+          <div class="box six" data-index=6></div>
+          <div class="box seven" data-index=7></div>
+          <div class="box eight" data-index=8></div>
         </div>
-        <div class="row d-flex justify-content-center">
-          <h4 id="game-display" class="col-10">-</h4>
+          <h4 id="game-display">-</h4>
           <p id="invalid-move">Invalid Move.</p>
-        </div>
       </div>
-    </div>
 
-    <div class="error-messages">
-      <p id="error-message"></p>
-    </div>
+      <div class="error-messages">
+        <p id="error-message"></p>
+      </div>
 
       <!--STATISTICS-->
       <div class="stats-div">
@@ -97,9 +88,9 @@
       <!--CHANGE PW FORM-->
       <div class="change-password-form-div">
         <form id="change-password-form">
-          <input class="col-12" type="password" name="passwords[old]" placeholder="current password">
+          <input class="col-8" type="password" name="passwords[old]" placeholder="current password">
           <br>
-          <input class="col-12" type="password" name="passwords[new]" placeholder="new password">
+          <input class="col-8" type="password" name="passwords[new]" placeholder="new password">
           <br>
           <input class="col-12 btn btn-primary" type="submit" value="Change password now">
         </form>
