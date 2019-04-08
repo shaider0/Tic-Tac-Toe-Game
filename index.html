@@ -50,7 +50,7 @@
     <!--START NEW GAME-->
     <div class="play-now-div">
       <form id="create">
-        <input type="submit" value="Start a New Game!" class="col-12 btn btn-dark">
+        <input id="play-now-button" type="submit" value="Start a New Game!" class="col-12 btn btn-success">
       </form>
     </div>
 
@@ -73,8 +73,13 @@
         </div>
         <div class="row d-flex justify-content-center">
           <h4 id="game-display" class="col-10">-</h4>
+          <p id="invalid-move">Invalid Move.</p>
         </div>
       </div>
+    </div>
+
+    <div class="error-messages">
+      <p id="error-message"></p>
     </div>
 
       <!--STATISTICS-->
@@ -96,7 +101,7 @@
           <br>
           <input class="col-12" type="password" name="passwords[new]" placeholder="new password">
           <br>
-          <input class="col-12 btn btn-dark" type="submit" value="change password now">
+          <input class="col-12 btn btn-primary" type="submit" value="Change password now">
         </form>
       </div>
 
@@ -106,10 +111,6 @@
           <input class="col-12 btn btn-dark" type="submit" value="Sign Out!">
           <p id="sign-out-display"></p>
         </form>
-      </div>
-
-      <div class="error-messages">
-        <p id="error-message"></p>
       </div>
 
     </div>

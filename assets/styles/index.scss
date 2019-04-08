@@ -37,6 +37,9 @@ input {
   margin: 2px 0;
 }
 
+#play-now-button {
+  padding: 15px;
+}
 
 .box {
   text-align: center;
@@ -139,6 +142,7 @@ input {
 #change-password-display,
 #sign-up-display,
 #sign-in-display,
+#invalid-move,
 #stats-display,
 #error-message {
   color: #10d16a;

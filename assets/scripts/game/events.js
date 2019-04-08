@@ -68,6 +68,12 @@ const onClick = function (event) {
     switchPlayer()
     $('#game-display').text('Player ' + store.currentPlayer + '\'s turn')
     checkWinner()
+  } else if (text || store.gameOver) {
+    $('#invalid-move').show()
+    setTimeout(function () {
+      $('#invalid-move').hide()
+    }, 3000
+    )
   }
 }
 
