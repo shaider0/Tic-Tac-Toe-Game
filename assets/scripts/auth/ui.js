@@ -1,6 +1,3 @@
-// show play again when end game is reached
-// $('#play-again').hide()
-
 const store = require('../store')
 
 const signUpSuccess = function (formData) {
