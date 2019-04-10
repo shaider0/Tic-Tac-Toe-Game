@@ -41,3 +41,7 @@ At the landing page, new users will be given the opportunity to sign up with an 
   * Bootstrap
   * Javascript
   * jQuery
+
+### Unsolved Problems
+
+In terms of meeting the minimum requirements for the project, there were no unsolved problems. In future iterations, I would like to work on adding more features (e.g., play vs. computer, online multiplayer).
