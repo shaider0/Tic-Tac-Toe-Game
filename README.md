@@ -34,7 +34,7 @@ At the landing page, new users will be given the opportunity to sign up with an 
 
 ![](./assets/images/3.png)
 
-### Technologies Used:
+### Technologies Used
 
   * HTML
   * CSS
