@@ -48,6 +48,7 @@ const addHandlers = function () {
   $('#show-change-password-form').on('click', onShowChangePasswordForm)
   $('.change-password-form-div').on('submit', onChangePasswordForm)
   $('#sign-out').on('submit', onSignOut)
+  $('.cancel-change-pw').on('click', () => $('.change-password-form-div').hide())
 }
 
 module.exports = {
